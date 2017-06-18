@@ -5,7 +5,7 @@ const VideoList = (props) =>
 {
     const videoItems = props.videos.map( v => {return <VideoListItem key={v.etag} video = {v}></VideoListItem>})
     return (
-        <ul class="col-md-4 list-group">
+        <ul className="col-md-4 list-group">
             {videoItems}
          </ul>
     );
