@@ -1,12 +1,14 @@
 import React from 'react'
+import VideoListItem from './video_list_item'
 
 const VideoList = (props) =>
 {
+    const videoItems = props.videos.map( v => {return <VideoListItem key={v.etag} video = {v}></VideoListItem>})
     return (
         <ul class="col-md-4 list-group">
-                {props.videos.length}
-            </ul>
+            {videoItems}
+         </ul>
     );
 }
 
-export default VideoList; 
+export default VideoList;  
